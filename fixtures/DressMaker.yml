@@ -1,0 +1,33 @@
+parameters:
+    genders:
+        - "Man"
+        - "Woman"
+    avatars:
+        - "image1.jpg"
+        - "image2.jpg"
+        - "image3.jpg"
+        - "image4.jpg"
+        - "image5.jpg"
+
+App\Entity\DressMaker:
+    dressMaker{1..20}:
+        firstname: "<firstname()>"
+        lastname: "<lastname()>"
+        username: "<username()>"
+        email: "<email()>"
+        phone: "7<numberBetween(6,7)><numberBetween(1000000,9999999)>"
+        roles: "[ROLE_DRESSMAKER]"
+        password: "password"
+        gender: "<randomElement(<{genders}>)>"
+        avatar: "<randomElement(<{avatars}>)>"
+    
+    dressMaker21:
+        firstname: "<firstname()>"
+        lastname: "<lastname()>"
+        username: "ndeye"
+        email: "<email()>"
+        phone: "7<numberBetween(6,7)><numberBetween(1000000,9999999)>"
+        roles: "[ROLE_DRESSMAKER]"
+        password: "password"
+        gender: "<randomElement(<{genders}>)>"
+        avatar: "<randomElement(<{avatars}>)>"

@@ -1,0 +1,3 @@
+App\Entity\Measure:
+    measure{1..2000}:
+        datas: "<measures()>"

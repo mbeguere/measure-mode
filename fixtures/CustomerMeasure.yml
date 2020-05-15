@@ -1,0 +1,6 @@
+App\Entity\CustomerMeasure:
+    customerMeasure{1..5000}:
+        model: "@model<numberBetween(1, 15)>"
+        customer: "@customer<numberBetween(1, 100)>"
+        measure: "@measure<numberBetween(1, 2000)>"
+        

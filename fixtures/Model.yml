@@ -1,0 +1,3 @@
+App\Entity\Model:
+    model{1..15}:
+        name: "Model <current()>"

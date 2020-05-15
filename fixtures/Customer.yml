@@ -1,0 +1,23 @@
+parameters:
+    genders:
+        - "Man"
+        - "Woman"
+    avatars:
+        - "image1.jpg"
+        - "image2.jpg"
+        - "image3.jpg"
+        - "image4.jpg"
+        - "image5.jpg"
+
+App\Entity\Customer:
+    customer{1..100}:
+        firstname: "<firstname()>"
+        lastname: "<lastname()>"
+        username: "<username()>"
+        email: "<email()>"
+        phone: "7<numberBetween(6,7)><numberBetween(1000000,9999999)>"
+        roles: "[ROLE_CUSTOMER]"
+        password: "password"
+        gender: "<randomElement(<{genders}>)>"
+        avatar: "<randomElement(<{avatars}>)>"
+        dressMaker: "@dressMaker<numberBetween(1, 21)>"
